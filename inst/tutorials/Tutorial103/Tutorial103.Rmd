@@ -33,7 +33,7 @@ c4="#686868" # GRIS COLOR TEXTO
 
 ```{r, echo=FALSE, out.width="100%", fig.align = "center"}
 knitr::include_graphics("images/modulo1.png")
-`````
+```
 
 El presente tutorial contiene preguntas relacionadas con  el análisis de correspondencia. A continuación se presentan un resumen  con los principales conceptos:
 
