@@ -39,7 +39,7 @@ knitr::include_graphics("images/modulo1.png")
 ```
 
 
-El presente tutorial contiene preguntas relacionadas con l estimación del modelo y sus supuestos, conceptos importante para la compresión los proceso relacionados con la inferencia realizada sobre los resultados obtenidos por el método de MCO.   
+El presente tutorial contiene preguntas relacionadas con la estimación del modelo y sus supuestos, conceptos importante para la compresión los proceso relacionados con la inferencia realizada sobre los resultados obtenidos por el método de MCO.   
 
 </br>
   
@@ -72,13 +72,13 @@ $$
 $$
 y 
 
-El intervalo de confianza para $\beta_{i}$ esta dado por :
+El intervalo de confianza para $\beta_{i}$ está dado por :
 
 $$
 \widehat\beta_j \pm t_{\alpha/2, n - p}\, \text{se}\left(\widehat\beta_j\right)
 $$
 
-y el estadistico de prueba para $Ho: \beta_{j} = B_{0}$ vs $Ho: \beta_{j} \neq B_{0}$ es
+y el estadístico de prueba para $Ho: \beta_{j} = B_{0}$ vs $Ho: \beta_{j} \neq B_{0}$ es
 
 $$T_{j,0} = \dfrac{\widehat\beta_j - B_{j,0}}{\text{se}\left(\widehat\beta_j\right)} \overset{\text{bajo }H_0}{\sim} t_{v: n - p}$$
 
@@ -119,7 +119,7 @@ knitr::include_graphics("images/mapa2.png")
 
 | concepto                   | código                                             |
 |:---------------------------|:---------------------------------------------------|
-| estimacion MCO             |`lm(y ~ x1 + x2 + x3 , data = namedata)`            |
+| estimación MCO             |`lm(y ~ x1 + x2 + x3 , data = namedata)`            |
 | estimación Steppwise       | `modelo_b0<- lm(y ~ 1, data=namedata)`             |
 |                            | `modelo_all <- lm(y ~ x1 + x2 + x3, data=namedata)`|
 |visualización de resultados | `summary(modelo)`                                  |
@@ -137,7 +137,7 @@ knitr::include_graphics("images/mapa2.png")
 La base de datos vivienda, contenida en paqueteMOD, contiene variables cuantitativas :
 
 * **preciom**      : precio de la vivienda
-* **areaconst**    : area construida
+* **areaconst**    : área construida
 * **parqueaderos** : número de parqueaderos
 * **banios**       : número de baños
 * **habitaciones** : número de habitaciones
@@ -145,7 +145,7 @@ La base de datos vivienda, contenida en paqueteMOD, contiene variables cuantitat
 * **piso** : piso de ubicación del apartamento
 * **estrato** : estrato socio económico donde se encuentra la vivienda
 
-A continuación se presenta los resultados de la estimacción MCO el modelo1 : 
+A continuación se presenta los resultados de la estimación MCO el modelo1 : 
 
 ```{r, echo=FALSE, comment=NA}
 library(paqueteMODELOS)
@@ -162,10 +162,10 @@ quiz(
   question("",
            correct = "Correcto!.El valor de la pendiente estimada es -41.83 , que corresponde al ajuste que hace el modelo cuando se adiciona una habitacion más a la vivienda",
            allow_retry = TRUE,
-           answer("Un parqueadero adicional, incrementa el precio de la vivienda en 130.6 millones ", message = "No...intentalo de nuevo!"),
+           answer("Un parqueadero adicional, incrementa el precio de la vivienda en 130.6 millones ", message = "No...inténtalo de nuevo!"),
            answer("Una habitación adicional vale 48.8 millones", correct = TRUE), 
            answer("Cada metro cuadrado adicional de área construida incrementa la vivienda en $ 3 090", message = "Incorrecto. Intenta de nuevo!."),
-           answer("La razón por la que el coeficiente tenga un valor negativo, es que una vivenda por lo menos tiene un baño y una habitación y su área construida es superior a 30 m2", message = "No...intentalo de nuevo!"),
+           answer("La razón por la que el coeficiente tenga un valor negativo, es que una vivenda por lo menos tiene un baño y una habitación y su área construida es superior a 30 m2", message = "No...inténtalo de nuevo!"),
            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés
            submit_button = "Enviar respuesta",
            try_again_button = "Intentar de nuevo"),
@@ -194,9 +194,9 @@ quiz(
   question("¿Pregunta?",
            correct = "Correcto!",
            allow_retry = TRUE,
-           answer("El valor del estadístico F, indica que el modelo no es adecuado para la estimación del precio", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("El valor de R2 indica que el modelo es apropiado para la explicación de la variabilidad del precio", message = "No...intentalo de nuevo!"),
-           answer("El valor-p correspondeinte a la prueba de significancia individual para la variable regresora areaconst indica que su valor no es significativo estadñísticamente", message = "Incorrecto. Intenta de nuevo!."),
+           answer("El valor del estadístico F, indica que el modelo no es adecuado para la estimación del precio", message = "Cerca, pero no...inténtalo de nuevo!"),
+           answer("El valor de R2 indica que el modelo es apropiado para la explicación de la variabilidad del precio", message = "No...inténtalo de nuevo!"),
+           answer("El valor-p correspondeinte a la prueba de significancia individual para la variable regresora areaconst indica que su valor no es significativo estadísticamente", message = "Incorrecto. Intenta de nuevo!."),
            answer("El modelo  explica un 60.85% de la variabilidad del precio", correct = TRUE),
            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés
            submit_button = "Enviar respuesta",
@@ -218,8 +218,8 @@ quiz(
   question("",
            correct = "Correcto!. Es necesario este supuesto para que la distribución de los estimadores de los coeficientes  y el estimador de Y, se distribuyan t-Student. Distribución base para la construcción de los intervalos de confianza y los estadístos de prueba asociados con las pruebas de hipótesis asociados ",
            allow_retry = TRUE,
-           answer("Para poder que el método de MCO encuentre una solución única ", message = "No...intentalo de nuevo!"),
-           answer("Poder encontrar el valor de la variable respuesta,  dado un conjunto de valores de las variables regresoras", message = "No...intentalo de nuevo!"),
+           answer("Para poder que el método de MCO encuentre una solución única ", message = "No...inténtalo de nuevo!"),
+           answer("Poder encontrar el valor de la variable respuesta,  dado un conjunto de valores de las variables regresoras", message = "No...inténtalo de nuevo!"),
            answer("Poder realizar inferencias sobre los coeficientes y la variable respuesta", correct = TRUE),
            answer("Poder obtener un valor mayor del R2", message = "Incorrecto. Intenta de nuevo!."),
            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés
@@ -250,8 +250,8 @@ quiz(
   question(" ",
            correct = "Correcto!, El valor -62.9 indica que una casa tiene un valor de 62.9 millones menos que un apartamento, bajo el supuesto que todas las demás variables son constantes.",
            allow_retry = TRUE,
-           answer("Todas las casas tienen un mayor valor que todos los apartamento", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("Todas las casas tienen un inferior  que todos los apartamentos", message = "Nop...intentalo de nuevo!"),
+           answer("Todas las casas tienen un mayor valor que todos los apartamento", message = "Cerca, pero no...inténtalo de nuevo!"),
+           answer("Todas las casas tienen un inferior  que todos los apartamentos", message = "Nop...inténtalo de nuevo!"),
            answer("Algunas casas pueden tener un valor superior a algunos apartamentos ", message = "Incorrecto. Intenta de nuevo!."),
            answer("Ninguna de las anteriores", correct = TRUE),
            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés
@@ -272,8 +272,8 @@ quiz(
 <!--   question("¿Pregunta?",  -->
 <!--            correct = "Respuesta y explicación!, .",  -->
 <!--            allow_retry = TRUE, -->
-<!--            answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"), -->
-<!--            answer("opción 2", message = "Nop...intentalo de nuevo!"), -->
+<!--            answer("opción 1", message = "Cerca, pero no...inténtalo de nuevo!"), -->
+<!--            answer("opción 2", message = "Nop...inténtalo de nuevo!"), -->
 <!--            answer("opción 3", message = "Incorrecto. Intenta de nuevo!."), -->
 <!--            answer("opción 4", correct = TRUE), -->
 <!--            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés   -->
@@ -294,8 +294,8 @@ quiz(
 <!--   question("¿Pregunta?",  -->
 <!--            correct = "Respuesta y explicación!, .",  -->
 <!--            allow_retry = TRUE, -->
-<!--            answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"), -->
-<!--            answer("opción 2", message = "Nop...intentalo de nuevo!"), -->
+<!--            answer("opción 1", message = "Cerca, pero no...inténtalo de nuevo!"), -->
+<!--            answer("opción 2", message = "Nop...inténtalo de nuevo!"), -->
 <!--            answer("opción 3", message = "Incorrecto. Intenta de nuevo!."), -->
 <!--            answer("opción 4", correct = TRUE), -->
 <!--            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés   -->
@@ -316,8 +316,8 @@ quiz(
 <!--   question("¿Pregunta?",  -->
 <!--            correct = "Respuesta y explicación!, .",  -->
 <!--            allow_retry = TRUE, -->
-<!--            answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"), -->
-<!--            answer("opción 2", message = "Nop...intentalo de nuevo!"), -->
+<!--            answer("opción 1", message = "Cerca, pero no...inténtalo de nuevo!"), -->
+<!--            answer("opción 2", message = "Nop...inténtalo de nuevo!"), -->
 <!--            answer("opción 3", message = "Incorrecto. Intenta de nuevo!."), -->
 <!--            answer("opción 4", correct = TRUE), -->
 <!--            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés   -->
@@ -338,8 +338,8 @@ quiz(
 <!--   question("¿Pregunta?",  -->
 <!--            correct = "Respuesta y explicación!, .",  -->
 <!--            allow_retry = TRUE, -->
-<!--            answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"), -->
-<!--            answer("opción 2", message = "Nop...intentalo de nuevo!"), -->
+<!--            answer("opción 1", message = "Cerca, pero no...inténtalo de nuevo!"), -->
+<!--            answer("opción 2", message = "Nop...inténtalo de nuevo!"), -->
 <!--            answer("opción 3", message = "Incorrecto. Intenta de nuevo!."), -->
 <!--            answer("opción 4", correct = TRUE), -->
 <!--            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés   -->
@@ -360,8 +360,8 @@ quiz(
 <!--   question("¿Pregunta?",  -->
 <!--            correct = "Respuesta y explicación!, .",  -->
 <!--            allow_retry = TRUE, -->
-<!--            answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"), -->
-<!--            answer("opción 2", message = "Nop...intentalo de nuevo!"), -->
+<!--            answer("opción 1", message = "Cerca, pero no...inténtalo de nuevo!"), -->
+<!--            answer("opción 2", message = "Nop...inténtalo de nuevo!"), -->
 <!--            answer("opción 3", message = "Incorrecto. Intenta de nuevo!."), -->
 <!--            answer("opción 4", correct = TRUE), -->
 <!--            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés   -->
@@ -382,8 +382,8 @@ quiz(
 <!--   question("¿Pregunta?",  -->
 <!--            correct = "Respuesta y explicación!, .",  -->
 <!--            allow_retry = TRUE, -->
-<!--            answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"), -->
-<!--            answer("opción 2", message = "Nop...intentalo de nuevo!"), -->
+<!--            answer("opción 1", message = "Cerca, pero no...inténtalo de nuevo!"), -->
+<!--            answer("opción 2", message = "Nop...inténtalo de nuevo!"), -->
 <!--            answer("opción 3", message = "Incorrecto. Intenta de nuevo!."), -->
 <!--            answer("opción 4", correct = TRUE), -->
 <!--            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés   -->
@@ -404,7 +404,7 @@ quiz(
 La base de datos `vivienda`, contenida en `paqueteMOD`, contiene variables cuantitativas :
 
 * **preciom**      : precio de la vivienda
-* **areaconst**    : area construida
+* **areaconst**    : área construida
 * **parqueaderos** : número de parqueaderos
 * **banios**       : número de baños
 * **habitaciones** : número de habitaciones
@@ -441,7 +441,7 @@ summary(modelo1)
 La base de datos `vivienda`, contenida en `paqueteMOD`, contiene variables cuantitativas :
 
 * **preciom**      : precio de la vivienda
-* **areaconst**    : area construida
+* **areaconst**    : área construida
 * **parqueaderos** : número de parqueaderos
 * **banios**       : número de baños
 * **habitaciones** : número de habitaciones
@@ -487,7 +487,7 @@ summary(modelo2)
 La base de datos `vivienda`, contenida en `paqueteMOD`, contiene variables cuantitativas :
 
 * **preciom**      : precio de la vivienda
-* **areaconst**    : area construida
+* **areaconst**    : área construida
 * **parqueaderos** : número de parqueaderos
 * **banios**       : número de baños
 * **habitaciones** : número de habitaciones
@@ -532,7 +532,7 @@ summary(forward)
 La base de datos `vivienda`, contenida en `paqueteMOD`, contiene variables cuantitativas :
 
 * **preciom**      : precio de la vivienda
-* **areaconst**    : area construida
+* **areaconst**    : área construida
 * **parqueaderos** : número de parqueaderos
 * **banios**       : número de baños
 * **habitaciones** : número de habitaciones
@@ -616,7 +616,7 @@ apply(betas_boot, 2,mean)
 La base de datos `vivienda`, contenida en `paqueteMOD`, contiene variables cuantitativas :
 
 * **preciom**      : precio de la vivienda
-* **areaconst**    : area construida
+* **areaconst**    : área construida
 * **parqueaderos** : número de parqueaderos
 * **banios**       : número de baños
 * **habitaciones** : número de habitaciones

@@ -74,7 +74,7 @@ Son grupos o conjuntos de objetos que son más similares entre sí que con los o
 
 </br>
 
-####  **Algoritmos de clústering**: 
+####  **Algoritmos de clustering**: 
 
 Son los métodos y procedimientos utilizados para realizar el análisis de clústeres. Algunos ejemplos populares incluyen K-Means, DBSCAN, Aglomerativo, y Mean Shift.
 
@@ -91,7 +91,7 @@ En el caso del algoritmo K-Means, un clúster está representado por su centroid
 
 </br>
 
-####  **Dendrograma**: 
+####  **Dendograma**: 
 
 Es una representación gráfica de los resultados del análisis de clúster jerárquico. Muestra cómo los objetos se agrupan en clústeres en diferentes niveles de similitud.
 

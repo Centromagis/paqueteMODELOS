@@ -34,7 +34,7 @@ exercise.warn_invisible = FALSE)
 # colores
 c1="#FF7F00" # NARANJA COLOR PRINCIPAL
 c2="#034a94" # AZUL FUERTE COLOR SECUNDARIO  
-c3="#0eb0c6" # AZUL CLARO COLOR TERCEARIO  
+c3="#0eb0c6" # AZUL CLARO COLOR TERCIARIO  
 c4="#686868" # GRIS COLOR TEXTO 
 ##  <div class="content-box-blue">    </div> ## caja azul
 ```
@@ -183,8 +183,8 @@ quiz(
   question("¿Cuáles son los requisitos entorno a las variables en un modelo regresión logística?",   
          correct = "Correcto!, .",
            allow_retry = TRUE,  
-           answer("La variable dependiente debe ser dicotómica. Las variables independientes deben ser numéricas o categóricas. La relación entre las variables independientes y la variable dependiente debe ser lineal.", message = "Cerca, pero no...intentalo de nuevo!"),  
-           answer("La variable dependiente debe ser continua. Las variables independientes pueden ser numéricas o categóricas. La relación entre las variables independientes y la variable dependiente no debe ser lineal.", message = "Nop...intentalo de nuevo!"),  
+           answer("La variable dependiente debe ser dicotómica. Las variables independientes deben ser numéricas o categóricas. La relación entre las variables independientes y la variable dependiente debe ser lineal.", message = "Cerca, pero no...inténtalo de nuevo!"),  
+           answer("La variable dependiente debe ser continua. Las variables independientes pueden ser numéricas o categóricas. La relación entre las variables independientes y la variable dependiente no debe ser lineal.", message = "Nop...inténtalo de nuevo!"),  
            answer("La variable dependiente debe ser continua. Las variables independientes pueden ser numéricas o categóricas. La relación entre las variables independientes y la variable dependiente debe ser lineal.", message = "Incorrecto. Intenta de nuevo!."),  
            answer("La variable dependiente debe ser dicotómica. Las variables independientes pueden ser numéricas o categóricas. La relación entre las variables independientes y la variable dependiente debe ser lineal.", correct = TRUE),  
            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés    
@@ -204,10 +204,10 @@ quiz(
     question("¿Cuál es la función de probabilidad utilizada en el modelo logit? ",   
              correct = "Correcto. La función logística se utiliza para modelar la probabilidad en el modelo logit. Esta función tiene forma de S.",   
              allow_retry = TRUE,  
-             answer("función logaritmica", message = "Cerca, pero no...intentalo de nuevo!"),  
+             answer("función logaritmica", message = "Cerca, pero no...inténtalo de nuevo!"),  
              answer("función logística", correct = TRUE),  
              answer("función normal", message = "Incorrecto. Intenta de nuevo!."),  
-             answer("función exponencial", message = "Nop...intentalo de nuevo!"), 
+             answer("función exponencial", message = "Nop...inténtalo de nuevo!"), 
              # Si no cambiamos estos textos en los botones, se mostrarán en Inglés    
              submit_button = "Enviar respuesta",  
              try_again_button = "Intentar de nuevo"),  
@@ -225,8 +225,8 @@ quiz(
     question("¿Cúal es el corte c más frecuentemente utilizado en el modelo logit?",   
              correct = "Correcto !, El punto en el que la probabilidad de la variable dependiente es igual a 0,5. Esto impica tener categorías de la variable dependiente balanceadas",   
              allow_retry = TRUE,  
-             answer("El punto en el que la probabilidad de la variable dependiente es igual a 1.", message = "Cerca, pero no...intentalo de nuevo!"),  
-             answer("El punto en el que la probabilidad de la variable dependiente es igual a 0.", message = "Nop...intentalo de nuevo!"),  
+             answer("El punto en el que la probabilidad de la variable dependiente es igual a 1.", message = "Cerca, pero no...inténtalo de nuevo!"),  
+             answer("El punto en el que la probabilidad de la variable dependiente es igual a 0.", message = "Nop...inténtalo de nuevo!"),  
              answer("El punto en el que la probabilidad de la variable dependiente es igual a 0,5.", correct = TRUE),    
              answer("El punto en el que la probabilidad de la variable dependiente es igual a -0,5." , message = "Incorrecto. Intenta de nuevo!."),
              # Si no cambiamos estos textos en los botones, se mostrarán en Inglés    
@@ -246,10 +246,10 @@ quiz(
     question("¿Cuál es la diferencia entre la regresión lineal y la regresión logística?",   
              correct = "Correcto!, .",   
              allow_retry = TRUE,  
-             answer("La regresión lineal se utiliza para predecir variables dependientes dicotómicas, mientras que la regresión logística se utiliza para predecir variables dependientes continuas.", message = "Cerca, pero no...intentalo de nuevo!"),  
+             answer("La regresión lineal se utiliza para predecir variables dependientes dicotómicas, mientras que la regresión logística se utiliza para predecir variables dependientes continuas.", message = "Cerca, pero no...inténtalo de nuevo!"),  
              answer(" La regresión lineal se utiliza para predecir variables dependientes continuas, mientras que la regresión logística se utiliza para predecir variables dependientes dicotómicas.", correct = TRUE), 
              answer("La regresión lineal se utiliza para predecir variables dependientes ordinales, mientras que la regresión logística se utiliza para predecir variables dependientes nominales.", message = "Incorrecto. Intenta de nuevo!."),  
-             answer("La regresión lineal se utiliza para predecir variables dependientes categóricas, mientras que la regresión logística se utiliza para predecir variables dependientes numéricas.",  message = "Nop...intentalo de nuevo!"),  
+             answer("La regresión lineal se utiliza para predecir variables dependientes categóricas, mientras que la regresión logística se utiliza para predecir variables dependientes numéricas.",  message = "Nop...inténtalo de nuevo!"),  
              # Si no cambiamos estos textos en los botones, se mostrarán en Inglés    
              submit_button = "Enviar respuesta",  
              try_again_button = "Intentar de nuevo"),  
@@ -268,9 +268,9 @@ quiz(
              correct = "Correcto!, .",   
              allow_retry = TRUE,  
              answer("Se puede mejorar la bondad del ajuste de un modelo de regresión logística seleccionando las variables independientes más relevantes.", correct = TRUE),   
-             answer("Se puede mejorar la bondad del ajuste de un modelo de regresión logística seleccionando más variables independientes.", message = "No...intentalo de nuevo!"),  
+             answer("Se puede mejorar la bondad del ajuste de un modelo de regresión logística seleccionando más variables independientes.", message = "No...inténtalo de nuevo!"),  
              answer("Se puede mejorar la bondad del ajuste de un modelo de regresión logística ajustando los parámetros del modelo sin seleccionar variables independientes.", message = "Incorrecto. Intenta de nuevo!."),  
-             answer("Se puede mejorar la bondad del ajuste de un modelo de regresión logística seleccionando menos variables independientes.", message = "Cerca, pero no...intentalo de nuevo!"), 
+             answer("Se puede mejorar la bondad del ajuste de un modelo de regresión logística seleccionando menos variables independientes.", message = "Cerca, pero no...inténtalo de nuevo!"), 
              # Si no cambiamos estos textos en los botones, se mostrarán en Inglés    
              submit_button = "Enviar respuesta",  
              try_again_button = "Intentar de nuevo"),  
@@ -288,8 +288,8 @@ quiz(
     question("¿Cómo se puede utilizar la regresión logística para clasificar datos?",   
              correct = "Respuesta y explicación!, .",   
              allow_retry = TRUE,  
-             answer("Se puede utilizar la regresión logística para clasificar datos asignando a cada observación un valor de la variable dependiente que represente la clase a la que no pertenece.", message = "Cerca, pero no...intentalo de nuevo!"),  
-             answer("Se puede utilizar la regresión logística para clasificar datos asignando a cada observación un valor de la variable dependiente que represente la probabilidad de que pertenezca a ninguna clase. 2", message = "No...intentalo de nuevo!"),  
+             answer("Se puede utilizar la regresión logística para clasificar datos asignando a cada observación un valor de la variable dependiente que represente la clase a la que no pertenece.", message = "Cerca, pero no...inténtalo de nuevo!"),  
+             answer("Se puede utilizar la regresión logística para clasificar datos asignando a cada observación un valor de la variable dependiente que represente la probabilidad de que pertenezca a ninguna clase. 2", message = "No...inténtalo de nuevo!"),  
              answer("Se puede utilizar la regresión logística para clasificar datos asignando a cada observación un valor de la variable dependiente que represente la clase a la que pertenece.", correct = TRUE),    
              answer("Se puede utilizar la regresión logística para clasificar datos asignando a cada observación un valor de la variable dependiente que represente la probabilidad de que pertenezca a todas las clases.", message = "Incorrecto. Intenta de nuevo!."), 
              # Si no cambiamos estos textos en los botones, se mostrarán en Inglés    
@@ -357,7 +357,7 @@ Un centro médico quiere desarrollar un modelo para predecir la probabilidad de 
 
 El centro médico quiere utilizar la regresión logística para estimar un modelo que pueda predecir la probabilidad de que un paciente sufra un infarto.
 
-Como primer paso requiere que seleccione una parte de la data equivalene al 60% (train) para desarrollar el modelo y el resto para realizar la evaluación del mismo (test).
+Como primer paso requiere que seleccione una parte de la data equivalente al 60% (train) para desarrollar el modelo y el resto para realizar la evaluación del mismo (test).
 
 
 ```{r p2, exercise=TRUE, exercise.lines = 30}  
@@ -379,7 +379,7 @@ library(paqueteMODELOS)
 library(ROSE)
 data(corazon)
 table(corazon$infarto)
-# separacion de muetras
+# separación de muestras
 ntrain <- nrow(corazon)*0.6
 ntest <- nrow(corazon)*0.4
 
@@ -470,7 +470,7 @@ glm(infarto ~ edad + angina + presion , family = binomial(link = "logit"), data 
 
 ### **Problema 5**  
 
-Finalmete se requiere evaliar el modelo utilizando para ello la base test
+Finalmente se requiere evaluar el modelo utilizando para ello la base test
 
 <pre>
 

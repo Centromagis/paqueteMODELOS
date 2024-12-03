@@ -41,7 +41,7 @@ El presente tutorial contiene preguntas relacionadas con los conceptos más impo
 
 #### **Diagrama de dispersión**
 
-herramienta gráfica, utili para la visualización de la relación que puede existir entre dos variables cuantitativas, basado en la forma que presenta la nube de puntos.
+herramienta gráfica, útil para la visualización de la relación que puede existir entre dos variables cuantitativas, basado en la forma que presenta la nube de puntos.
 
 </br>
 
@@ -66,13 +66,13 @@ Donde :
 
 * $\varepsilon$ : vector de errores ($dim = n \times 1$)
 
-Conformando un sistema de $n$ ecuaciones con $k+1$ incognitas ($\beta_{i}$, $i=0,1,2,\dots k$)
+Conformando un sistema de $n$ ecuaciones con $k+1$ incógnitas ($\beta_{i}$, $i=0,1,2,\dots k$)
 
 </br></br>
 
 #### **Estimación MCO**
 
-El resultado de la minimización de la suma de cuadrados de los errores (derivacón parcial de $S$ con respecto a $\beta$) 
+El resultado de la minimización de la suma de cuadrados de los errores (derivación parcial de $S$ con respecto a $\beta$) 
 
 $$S\left(\boldsymbol{\beta}\right) = \boldsymbol{\varepsilon}'\boldsymbol{\varepsilon}
 \left(\boldsymbol{y} - \boldsymbol{X\beta}\right)'\left(\boldsymbol{y} - \boldsymbol{X\beta}\right)$$
@@ -89,9 +89,9 @@ $$\boldsymbol{\widehat\beta} = \left(\boldsymbol{X}'\boldsymbol{X}\right)^{-1}\ 
 
 * **Normalidad de los errores**: Los errores son variables aleatorias normales. $e \sim normal$
 
-* **Nodelo completo**: Los errores tienen media cero. $E[e] = 0$
+* **Modelo completo**: Los errores tienen media cero. $E[e] = 0$
 
-* **Homoscedasticidad** :Los errores tienen varianza constante. $V[e] = \sigma^{2}$
+* **Homocedasticidad** :Los errores tienen varianza constante. $V[e] = \sigma^{2}$
 
 * **No autocorrelación de errores** : Los errores son mutuamente independientes. $E[e_i, e_j] =0$
 
@@ -115,7 +115,7 @@ knitr::include_graphics("images/mapa2.png")
 | coeficiente de correlación |  `cor(x,y)`                            |
 | matriz de dispersión       |  `plot(x,y)`                           |
 | matriz correlaciones dispersión | `GGally::ggpairs(data)`  |
-| estimacion MCO             |`lm(y ~ x1 + x2 + x3 , data = namedata)`|
+| estimación MCO             |`lm(y ~ x1 + x2 + x3 , data = namedata)`|
 | estimación Steppwise       | `modelo_b0<- lm(y ~ 1, data=namedata)`|
 |                            | `modelo_all <- lm(y ~ x1 + x2 + x3, data=namedata)`|
 | Validación de supuestos    |                                       |
@@ -150,10 +150,10 @@ quiz(
   question("  ", 
            correct = " Correcto!", 
            allow_retry = TRUE,
-           answer("( a )", message = "No...intentalo de nuevo!"),
+           answer("( a )", message = "No...inténtalo de nuevo!"),
            answer("( b )", correct = TRUE),
            answer("( c )", message = "Incorrecto. Intenta de nuevo!."),
-           answer("( d )", message = "No...intentalo de nuevo!"),
+           answer("( d )", message = "No...inténtalo de nuevo!"),
            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
            submit_button = "Enviar respuesta",
            try_again_button = "Intentar de nuevo"),
@@ -183,10 +183,10 @@ quiz(
   question("  ", 
            correct = "Correcto! ", 
            allow_retry = TRUE,
-           answer("( a )", message = "No...intentalo de nuevo!"),
+           answer("( a )", message = "No...inténtalo de nuevo!"),
            answer("( b )", message = "Incorrecto. Intenta de nuevo!."),
            answer("( c )", correct = TRUE), 
-           answer("( d )", message = "No...intentalo de nuevo!"),
+           answer("( d )", message = "No...inténtalo de nuevo!"),
            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
            submit_button = "Enviar respuesta",
            try_again_button = "Intentar de nuevo"),
@@ -208,9 +208,9 @@ quiz(
            correct = "Correcto!", 
            allow_retry = TRUE,
            answer("Normalidad, independencia, varianza constante y media cero", correct = TRUE),
-           answer("Normalidad, varianza heterogenea, independencia y media cero", message = "Nop...intentalo de nuevo!"),
+           answer("Normalidad, varianza heterogenea, independencia y media cero", message = "Nop...inténtalo de nuevo!"),
            answer("No tienen supuestos ", message = "Incorrecto. Intenta de nuevo!."),
-           answer("Normalidad y varianza constante", message = "Cerca, pero no...intentalo de nuevo!"),
+           answer("Normalidad y varianza constante", message = "Cerca, pero no...inténtalo de nuevo!"),
            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
            submit_button = "Enviar respuesta",
            try_again_button = "Intentar de nuevo"),
@@ -239,10 +239,10 @@ quiz(
   question(" ", 
            correct = "Correcto!", 
            allow_retry = TRUE,
-           answer("( a )", message = "No...intentalo de nuevo!"),
+           answer("( a )", message = "No...inténtalo de nuevo!"),
            answer("( b )", correct = TRUE),  
            answer("( c )", message = "Incorrecto. Intenta de nuevo!."),
-           answer("( d )", message = "No...intentalo de nuevo!"),
+           answer("( d )", message = "No...inténtalo de nuevo!"),
            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
            submit_button = "Enviar respuesta",
            try_again_button = "Intentar de nuevo"),
@@ -264,9 +264,9 @@ quiz(
            correct = "Correcto. cuando existe una relación excta entre dos variables predictoras ( X_1 = 2*X_2 , no se pueden estimar los coeficientes", 
            allow_retry = TRUE,
            answer("Provocaria multicolinealidad dentro del modelo", correct = TRUE),
-           answer("Se presentaría heterogeneidad en los residuos", message = "No...intentalo de nuevo!"),
+           answer("Se presentaría heterogeneidad en los residuos", message = "No...inténtalo de nuevo!"),
            answer("Los coeficientes de regresión no tendrán interpretación", message = "Incorrecto. Intenta de nuevo!."),
-           answer("Los errores no tendrán distribución normal" , message = "No...intentalo de nuevo!"),
+           answer("Los errores no tendrán distribución normal" , message = "No...inténtalo de nuevo!"),
            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
            submit_button = "Enviar respuesta",
            try_again_button = "Intentar de nuevo"),
@@ -295,8 +295,8 @@ quiz(
   question("", 
            correct = "Correcto!", 
            allow_retry = TRUE,
-           answer("( a )", message = "No...intentalo de nuevo!"),
-           answer("( b )" , message = "No...intentalo de nuevo!"),
+           answer("( a )", message = "No...inténtalo de nuevo!"),
+           answer("( b )" , message = "No...inténtalo de nuevo!"),
            answer("( c )", message = "Incorrecto. Intenta de nuevo!."),
            answer("( d )", correct = TRUE), 
            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
@@ -328,8 +328,8 @@ quiz(
   question("", 
            correct = "Correcto!", 
            allow_retry = TRUE,
-           answer("Las variaciones asociadas a cada elemento del vector aleatorio.", message = "No...intentalo de nuevo!"),
-           answer("Las esperanzas condicionales entre los pares de elementos del vector aleatorio.", message = "No...intentalo de nuevo!"),
+           answer("Las variaciones asociadas a cada elemento del vector aleatorio.", message = "No...inténtalo de nuevo!"),
+           answer("Las esperanzas condicionales entre los pares de elementos del vector aleatorio.", message = "No...inténtalo de nuevo!"),
            answer("Los coeficientes de correlaciones asociados a cada elemento del vector aleatorio.", message = "Incorrecto. Intenta de nuevo!."),
            answer("Las covarianzas entre los pares de elementos del vector aleatorio.", correct = TRUE),
            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
@@ -347,12 +347,12 @@ quiz(
 La base de datos ausentismo contenida en paqueteMOD contiene las siguientes variables:
 
 * id : identificación del empleado
-* ausen : número de dias que un empleado se ausenta del trabajo en el último año
+* ausen : número de días que un empleado se ausenta del trabajo en el último año
 * taller : toma el valor de 1 si el empleado trabaja en el taller y 0 si no 
 * sexo : toma el valor de 1 si el empleado es un hombre y 0 si es una mujer
 * edad : edad del empleado en años
-* antg : antiguedad del empleado en la empresa
-* sala : salrio del empleado
+* antg : antigüedad del empleado en la empresa
+* sala : salario del empleado
 
 A partir de la siguiente matriz, cual de las variables aporta más a la explicación de la variabilidad de ausentismo?
 
@@ -370,8 +370,8 @@ quiz(
   question("",
            correct = "Correcto!, presenta una correlación de -0.715, altamente significativa.",
            allow_retry = TRUE,
-           answer("id", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("sexo", message = "Nop...intentalo de nuevo!"),
+           answer("id", message = "Cerca, pero no...inténtalo de nuevo!"),
+           answer("sexo", message = "Nop...inténtalo de nuevo!"),
            answer("edad", message = "Incorrecto. Intenta de nuevo!."),
            answer("antg", correct = TRUE),
            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés
@@ -392,8 +392,8 @@ quiz(
 <!--   question("¿Pregunta?",  -->
 <!--            correct = "Respuesta y explicación!, .",  -->
 <!--            allow_retry = TRUE, -->
-<!--            answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"), -->
-<!--            answer("opción 2", message = "Nop...intentalo de nuevo!"), -->
+<!--            answer("opción 1", message = "Cerca, pero no...inténtalo de nuevo!"), -->
+<!--            answer("opción 2", message = "Nop...inténtalo de nuevo!"), -->
 <!--            answer("opción 3", message = "Incorrecto. Intenta de nuevo!."), -->
 <!--            answer("opción 4", correct = TRUE), -->
 <!--            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés   -->
@@ -414,8 +414,8 @@ quiz(
 <!--   question("¿Pregunta?",  -->
 <!--            correct = "Respuesta y explicación!, .",  -->
 <!--            allow_retry = TRUE, -->
-<!--            answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"), -->
-<!--            answer("opción 2", message = "Nop...intentalo de nuevo!"), -->
+<!--            answer("opción 1", message = "Cerca, pero no...inténtalo de nuevo!"), -->
+<!--            answer("opción 2", message = "Nop...inténtalo de nuevo!"), -->
 <!--            answer("opción 3", message = "Incorrecto. Intenta de nuevo!."), -->
 <!--            answer("opción 4", correct = TRUE), -->
 <!--            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés   -->
@@ -557,7 +557,7 @@ dim(viviendaSNA)
 
 ### **Problema 5**
 
-Para la base de datos vivienda, contenida en paqueteMOD, estime las relaciones existentes entre las variables cuantitativas.  ¿Qué ocurre cuando cambianos la escala de las variables?
+Para la base de datos vivienda, contenida en paqueteMOD, estime las relaciones existentes entre las variables cuantitativas.  ¿Qué ocurre cuando cambiamos la escala de las variables?
 
 ```{r p5, exercise=TRUE, exercise.lines = 15}
 library(paqueteMODELOS)

@@ -1,5 +1,5 @@
 ---
-title: "**ANÁLISIS DE CORRESPON- DENCIA**"
+title: "**ANÁLISIS DE CORRESPONDENCIA**"
 author: Modelos Estadística para la toma de decisiones
 output: 
   learnr::tutorial:
